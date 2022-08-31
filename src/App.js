@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="w-full h-full bg-oiroirbeebee-greyllow-1">
+    <div className="relative w-full h-full bg-oiroirbeebee-greyllow-1">
       <Navbar />
       <Body />
       <Canvas />
