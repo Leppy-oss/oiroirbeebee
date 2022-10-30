@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel='stylesheet' type='text/css' href='styles.css'>
+    <link rel='icon' type='image/x-icon' href='./images/favicon.ico'>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap' rel='stylesheet'>
+    <title>oiroirbeebee</title>
+    <meta charset='UTF-8'>
+    <meta name='description' content='oiroirbeebee'>
+    <meta name='keywords' content='roadrunner, meepmeep, oiroirbeebee, technicbots, 8565, flyset, first tech challenge, ftc, quintic, cubic, splines, parametric, blitz, html, css, js, cdn, vanilla javascript, path planning'>
+    <meta name='author' content='Ryan Xu'>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            window.dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+</head>
+
+<body>
+    <main>
+        <h2 id='version-number'>v0.1.2</h2>
+        <div id='everything'>
+            <div id='mains'>
+                <div id='banner'>
+                    <h1 id='welcome-text'>Welcome to oiroirbeebee!</h1>
+                </div>
+                <h1 id='plug'>The world's premiere Roadrunner pathing program</h1>
+                <div id='app'>
+                    <div id='core-app'>
+                        <canvas id='main-canvas' width='600' height='600'></canvas>
+                        <img src='./images/compassblack.png' alt='compass' id='compass'>
+                    </div>
+                </div>
+                <div id='side-stuff'>
+                    <div id='info-panel-content'>
+                        <h1 id='info-panel-title'>Info Panel</h1>
+                        <div id='info-panel' class='common-style'>
+                            <p class='side-panel-children' id='point-index'>No points selected</p>
+                            <p class='side-panel-children' id='x-coord'></p>
+                            <p class='side-panel-children' id='y-coord'></p>
+                            <p class='side-panel-children' id='heading'></p>
+                            <input style='visibility: hidden' type='range' min='-360' max='360' step='0.001' value='0' class='heading-slider' id='heading-slider'>
+                        </div>
+                        <p id="tensioning-explanation">Adjust spline tensioning to match quintic shape</p>
+                        <input type="range" min='0.01' max="1.5" step="0.01" value='0.5' id='tensioning-slider'>
+                    </div>
+                    <div id='instructions-cluster'>
+                        <h2 id='instructions-title' class=' '>Controls</h2>
+                        <p id='r'>(R) - Reset</p>
+                        <p id='q'>(Q) - Start/Stop Pathing</p>
+                        <p id='o'>(O) - Reset All Headings (Except Current One)</p>
+                        <p id='i'>(I) - Select Next Pathpoint</p>
+                    </div>
+                    <div id='disclaimer' class=''>
+                        <h1><strong>DISCLAIMERS:</strong></h1>
+                        <p>*VISUALIZED SPLINES ARE NOT PERFECT*</p>
+                        <p>*VISUALIZED SPLINES ARE NOT PERFECT*</p>
+                        <p>*VISUALIZED SPLINES ARE NOT PERFECT*</p>
+                        <p>*THEY ARE CUBIC SPLINES, NOT QUINTIC SPLINES*</p>
+                        <p>*MODIFYING THE INITIAL HEADING WILL CAUSE THE ACTUAL PATH TO LOOK DIFFERENT*</p>
+                        <p>*ONLY SPLINETOSPLINEHEADING() IS AVAILABLE RIGHT NOW*</p><br>
+                        <p>If you would like to see any changes, please contact me on Discord: Leppy#6721</p>
+                    </div>
+                </div>
+            </div>
+            <div id='control-panel'>
+                <button class='common-style side-glow coord-button' id='start-stop-button' onclick='toggle()'>Start (Q)</button>
+                <button class='common-style side-glow coord-button' id='reset-button' onclick='reset()'>Reset (R)</button>
+                <select class='common-style side-glow' name='field' id='field-selection'>
+                            <option value='power-play-light'>Powerplay</option>
+                            <option value='freight-frenzy-light'>Freight Frenzy (Light)</option>
+                            <option value='freight-frenzy-dark'>Freight Frenzy (Dark)</option>
+                            <option value='ultimate-goal-dark'>Ultimate Goal</option>
+                            <option value='skystone-light'>Skystone (Light)</option>
+                            <option value='skystone-dark'>Skystone (Dark)</option>
+                            <option value='skystone-neon'>Skystone (Neon)</option>
+                            <option value='field-gray'>Grid (Gray)</option>
+                            <option value='field-green'>Grid (Green)</option>
+                            <option value='field-blue'>Grid (Blue)</option>
+                        </select>
+            </div>
+            <div id='export-to-code'>
+                <p id='export-descriptor'>Export to</p>
+                <select class='common-style side-glow' id='selection' name='language'>
+                        <option value='java'>Java</option>
+                        <option value='kotlin'>Kotlin</option>
+                    </select>
+                <button class='common-style' id='export-button' onclick='exportToCode() '>Export</button>
+                <p id='export-text'></p>
+            </div>
+            <p id='teaser'>view console for a surprise :)</p>
+        </div>
+        <script type='text/javascript ' src='script.js '></script>
+    </main>
+</body>
+
+</html>
