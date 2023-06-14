@@ -17,9 +17,7 @@ More info about the specific Node modules can be found [here](https://github.com
 
 To use any of these app distributions, you need to enable Javascript in your browser.
 
-Please install git [here](https://git-scm.com/downloads) if you haven't done so already. Git will be used extensively for programmers to sync up their code with each other.
-
-🤡🤡🤡 USE VSCODE TO EDIT SOURCE CODE 🤡🤡🤡
+Please install git [here](https://git-scm.com/downloads) if you haven't done so already.
 
 ## Additional Info
 
@@ -27,4 +25,4 @@ To clone the repository, first install git [here](https://git-scm.com/downloads)
 
 Then, type in CMD/Terminal: `git clone https://github.com/Leppy-oss/`
 
-Don't hesitate to contact me if you need any help! My Discord is **Leppy#6721**
+Don't hesitate to contact me if you need any help!
